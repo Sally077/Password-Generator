@@ -88,6 +88,12 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+prompt("Enter a password length between 10 and 64 : ");
+prompt("Would you like to include special characters : ");
+prompt("Would you like lowercase characters : ");
+prompt("Would you like uppercase characters :");
+
+
 // Function to prompt user for password options
 function getPasswordOptions() {
 
@@ -100,11 +106,26 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
+   
 
 }
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
+
+function generatePassword() {
+  console.log("testing to see if my button works")
+  return "generated password text should show up here"
+
+//  step 1 prompt user
+//      a. to ask for the value length of password (data range >=10 and <= 64)
+//      b. prompt user for uppercase/lowercase and special characters
+//  step 2 input validation ( e.g. isupper?, islower?, length)
+//  step 3 generate password
+//  step 4 display generated password on webpage
+   
+
+}
 
 // Write password to the #password input
 function writePassword() {
@@ -112,14 +133,11 @@ function writePassword() {
   var passwordText = document.querySelector('#password');
 
   passwordText.value = password;
+  
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
-
-var greeting = "hello"
-
-console.log("hello")
 
 
 
