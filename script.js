@@ -117,6 +117,11 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
 
+var greeting = "hello"
+
+console.log("hello")
+
+
 
 // Pseudo code
 
@@ -138,6 +143,29 @@ special characters
 
 once prompts are answered should generate a password
 
+
+Starter Codes:
+
+1. function getPasswordOptions() { ~ I think this will select all the hold all the data in the array
+
+2. function getRandom(arr) { ~ This should connect to all of the characters needed so the computer can randomly select characters, integers and strings 
+
+3. function generatePassword() { ~ This should generate the actual password before submitting the password as text
+
+4. var generateBtn = document.querySelector('#generate');   ~ this should link to the generate button and code needs adding to make it responisve when clicked
+
+5. function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector('#password');
+
+  passwordText.value = password;  ~ I think that this will pass the generated password through the parameters??
+
+
+  generateBtn.addEventListener('click', writePassword); ~ I think this will write the password text into the placholder?
+
+
+
+  I need to find out what the functions above do and some of the keywords
 */
 
 
