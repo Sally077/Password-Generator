@@ -25,6 +25,8 @@ var specialCharacters = [
   '.'
 ];
 
+
+
 // Array of numeric characters to be included in password
 var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
@@ -58,6 +60,8 @@ var lowerCasedCharacters = [
   'z'
 ];
 
+
+
 // Array of uppercase characters to be included in password
 var upperCasedCharacters = [
   'A',
@@ -88,34 +92,75 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-prompt("Enter a password length between 10 and 64 : ");
-prompt("Would you like to include special characters : ");
-prompt("Would you like lowercase characters : ");
-prompt("Would you like uppercase characters :");
+
+
+
+var minCharacterLength = 10;
+var maxCharacterLength = 64;
+
+
+var len = prompt("Enter a password length between 10 and 64 : "); {
+
+}
+  if (len >= minCharacterLength && len <= maxCharacterLength);
+      prompt("Characters meet conditions set");
+  if (len <= minCharacterLength || len >= maxCharacterLength);
+      prompt("Characters do not meet length please enter a number between 10 and 64") //need while loop?
+
+
+var char = prompt("Would you like to include special characters : ");
+var lower = prompt("Would you like lowercase characters : ");
+var upper = prompt("Would you like uppercase characters :");
+
+console.log(len);
+console.log(char);
+console.log(lower);
+console.log(upper);
 
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-
+   
+   
 }
+
 
 // Function for getting a random element from an array
 function getRandom(arr) {
+  
 
 }
 
 // Function to generate password with user input
-function generatePassword() {
-   
+ function generatePassword = (hasSymbols, hasnumbers, hasUppercase, hasLowercase ) => {
 
-}
+ 
+
+
+  const availableCharacters =[
+
+    ...(hasSymbols ? specialCharacters : []),
+    ...(hasnumbers ? numericCharacters : []),
+    ...(hasUppercase ? lowerCasedCharacters : []),
+    ...(hasLowercase ? upperCasedCharacters : [])
+
+  ];
+ }
+
+ console.log(availableCharacters);
+
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
-function generatePassword() {
-  console.log("testing to see if my button works")
-  return "generated password text should show up here"
+
+
+
+// function generatePassword() {
+//   console.log("testing to see if my button works")
+//   return "generated password text should show up here"
+// }
 
 //  step 1 prompt user
 //      a. to ask for the value length of password (data range >=10 and <= 64)
@@ -125,7 +170,7 @@ function generatePassword() {
 //  step 4 display generated password on webpage
    
 
-}
+
 
 // Write password to the #password input
 function writePassword() {
