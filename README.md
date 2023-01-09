@@ -1,79 +1,98 @@
-# Module 5 Challenge: Password Generator
+# <Bootstrap Portfolio>
 
-## Overview
+## Description
+
+
+For the password generator task I was asked to create a series of functions to create a password generator using Javascript. The HTML and  CSS 
+was already present so the main focus was to complete the incomplete functions in the javascript code (script.js).
+
+Firstly I logged a couple of tests to check that my button was working and entered text into the generate password function to check that text 
+would pass through the function.
+
+I then began creating the pseudo code so I could keep track of the tasks that needed completing and break down each step (see the steps below)
+
+
+  step 1 prompt user
+      a. to ask for the value length of password (data range >=10 and <= 64)
+     b. prompt user for uppercase/lowercase and special characters
+ step 2 input validation ( e.g. isupper?, islower?, length)
+ step 3 generate password
+ step 4 display generated password on webpage
+
+ The first step I took was to create some prompts as suggested in the README instructions for this task. The prompts were easy to set up but I did have some issues at the start 
+ as I tried to place my prompts inside the functions and this did not work so I moved them outside. 
+
+ I the set to work adding an if statement to check the length of the characters in the code to make sure that data was entered between 10 and 64 characters. There was an issue with this code
+ as I did an AND code to check the values and an OR code the prompts did not bypass when the correct data range was entered.
+
+ Having not much experience of using Javascript I decided to do some research into the code for creating a password generator the code I followed did not work
+ well due to it not fitting in with the existing code in the javascript file. So after a couple of attempts I decided to look for solutions to incorporating the arrays 
+ that were already hard coded into the program.
+
+ For selecting uppercase and lowercase values I used a code that casted a string datatype and selected the ASCII Character set code (CharCode). The Math floor code made sure that the value selected was an integer an the Math Random code selected a random value.  I moved the special character and number arrays from the top and pasted them into the randomgenerate function.
+
  
-This week’s challenge requires you to create an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
-
-The password can include special characters. If you’re unfamiliar with these, see this [list of Password Special Characters from the OWASP Foundation](https://www.owasp.org/index.php/Password_special_characters).
-
-## Instructions
-
-The following image shows the web application's appearance and functionality:
-
-![password generator demo](./assets/05-javascript-challenge-demo.png)
+   
 
 
-* Generate a password when the button is clicked
-  * Present a series of prompts for password criteria
-    * Length of password
-      * At least 10 characters but no more than 64.
-    * Character types
-      * Lowercase
-      * Uppercase
-      * Numeric
-      * Special characters ($@%&*, etc)
-  * Code should validate for each input and at least one character type should be selected
-  * Once prompts are answered then the password should be generated and displayed in an alert or written to the page
-
-## Grading Requirements
-
-This challenge is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * The challenge should not produce any errors in the console when you inspect it using Chrome DevTools.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
 
 
-## Review
 
-You are required to submit the following for review:
+## Table of Contents (Optional)
 
-* The URL of the deployed application.
+If your README is long, add a table of contents to make it easy for users to find what they need.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
 
+## Installation
+
+My code does not currently need an install and can be viewed directly through the URL.
+
+## Usage
+
+Provide instructions and examples for use. Include screenshots as needed.
+
+To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+
+
+
+
+
+## Credits
+
+There were no collaborators in this task.
+
+
+I followed the bootcamp zoom tutorial recordings on Javascript arrays and if statements. 
+
+I looked at the following tutorial for inspiration on how to create a password generator James Q Quick
+https://www.youtube.com/watch?v=O-79Cb5s9U4
+
+
+I looked at the following tutorial on password generators from Traversy Media
+https://www.youtube.com/watch?v=duNmhKgtcsI
+
+
+## License
+
+I have chosen a MIT license for this project
 ---
 
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+## Badges
+
+I now have 2 git hub badge acheivements pullshark x2 and YOLO
+
+## Features
+
+clipboard?
+
+## How to Contribute
+
+N/A
+
+## Tests
+
+I have created a series of tests as I went along and took screenshots of some of the tests I tried when I ran my code.
