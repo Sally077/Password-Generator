@@ -31,34 +31,34 @@
 // var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 // Array of lowercase characters to be included in password
-var lowerCasedCharacters = [
-  'a',
-  'b',
-  'c',
-  'd',
-  'e',
-  'f',
-  'g',
-  'h',
-  'i',
-  'j',
-  'k',
-  'l',
-  'm',
-  'n',
-  'o',
-  'p',
-  'q',
-  'r',
-  's',
-  't',
-  'u',
-  'v',
-  'w',
-  'x',
-  'y',
-  'z'
-];
+// var lowerCasedCharacters = [
+//   'a',
+//   'b',
+//   'c',
+//   'd',
+//   'e',
+//   'f',
+//   'g',
+//   'h',
+//   'i',
+//   'j',
+//   'k',
+//   'l',
+//   'm',
+//   'n',
+//   'o',
+//   'p',
+//   'q',
+//   'r',
+//   's',
+//   't',
+//   'u',
+//   'v',
+//   'w',
+//   'x',
+//   'y',
+//   'z'
+// ];
 
 
 
@@ -145,13 +145,14 @@ function getRandomSymbol() {
 function getRandomUpper() {
   const upperCasedCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-  return upperCasedCharacters[Math.floor(Math.random()) * upperCasedCharacters.length];
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+
 }
 
 function getRandomLower() {
-  const lowerCasedCharacters = 'abcdefghijklmnopqrstuvwxyz'
+  
 
-  return lowerCasedCharacters[Math.floor(Math.random()) * lowerCasedCharacters.length];
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
 
 console.log(getRandomNumber());
@@ -159,25 +160,6 @@ console.log(getRandomSymbol());
 console.log(getRandomLower());
 console.log(getRandomUpper());
 
-// Function to generate password with user input
-//  function generatePassword (len, hasSymbols, hasnumbers, hasUppercase, hasLowercase ) => {
-
- 
-
-
-//   const availableCharacters =[
-
-//     ...(hasSymbols ? specialCharacters : []),
-//     ...(hasnumbers ? numericCharacters : []),
-//     ...(hasUppercase ? lowerCasedCharacters : []),
-//     ...(hasLowercase ? upperCasedCharacters : [])
-
-//   ];
-//  }
-
-//  console.log(availableCharacters);
-
-//  generatePassword(len, char=true, lower=true, upper=true);
 
 
 
