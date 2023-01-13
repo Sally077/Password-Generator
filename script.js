@@ -99,18 +99,26 @@ var minCharacterLength = 10;
 var maxCharacterLength = 64;
 
 
-var len = prompt("Enter a password length between 10 and 64 : "); {
+var len = prompt("Enter a password length between 10 and 64 : ")
 
+//ERROR Change to iteration on next line
+if (len >= minCharacterLength && len <= maxCharacterLength) { 
+  alert ("Characters meet conditions set")
 }
-  if (len >= minCharacterLength && len <= maxCharacterLength);
-      prompt("Characters meet conditions set");
-  if (len <= minCharacterLength || len >= maxCharacterLength);
-      prompt("Characters do not meet length please enter a number between 10 and 64") //need while loop?
+else{ 
+  alert("Characters do not meet length please enter a number between 10 and 64");
+  var len = prompt("Enter a password length between 10 and 64 : ")
+}
 
 
-var char = prompt("Would you like to include special characters : ");
-var lower = prompt("Would you like lowercase characters : ");
-var upper = prompt("Would you like uppercase characters :");
+ 
+   
+
+
+
+var char = confirm("Would you like to include special characters : ");
+var lower = confirm("Would you like lowercase characters : ");
+var upper = confirm("Would you like uppercase characters :");
 
 console.log(len);
 console.log(char);
@@ -118,11 +126,30 @@ console.log(lower);
 console.log(upper);
 
 
+
+
 // Function to prompt user for password options
-function getPasswordOptions() {
+
+
+
+// function getPasswordOptions() {
+
+var selectedArrays = specialCharacters.concat(numericCharacters);
+
+console.log(selectedArrays);
+
+// return(getPasswordOptions)
+
+  // var possibleChar = []
+
+  // possibleChar.concat(getRandomLower)
+  // possibleChar.concat(getRandomUpper)
+  // possibleChar.concat(getRandomNumber)
+  // possibleChar.concat(getRandomSymbol)
+
+  // console.log()
    
-   
-}
+// }
 
 
 // Function for getting a random element from an array
