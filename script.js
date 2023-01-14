@@ -119,11 +119,13 @@ else{
 var char = confirm("Would you like to include special characters : ");
 var lower = confirm("Would you like lowercase characters : ");
 var upper = confirm("Would you like uppercase characters :");
+var number = confirm("Would you like numbers included in your password :");
 
 console.log(len);
 console.log(char);
 console.log(lower);
 console.log(upper);
+console.log(number);
 
 
 
@@ -134,22 +136,72 @@ console.log(upper);
 
 // function getPasswordOptions() {
 
-var selectedArrays = specialCharacters.concat(numericCharacters);
+const lengthEl = document.getElementById("length");
+const uppercaseEl = document.getElementById("uppercase");
+const lowercaseEl = document.getElementById("lowercase");
+const numbersEl = document.getElementById("numbers");
+const generateEl = document.getElementById("generate");
 
-console.log(selectedArrays);
+const randomFunction = {
+  lower: getRandomLower,
+  upper: getRandomUpper,
+  number: getRandomNumber,
+  Symbol: getRandomSymbol
+};
 
-// return(getPasswordOptions)
 
-  // var possibleChar = []
+// Code below posibly not necessary as I do not have check boxes in my html
+// generate event
+generateEl.addEventListener('click', () => {
+  const length = lengthEl.value;
+  const hassymbol = lowercaseEl.checked;
+  const hasUpper = lowercaseEl.checked;
+  const hasLower = lowercaseEl.checked;
+  const hasNumber = lowercaseEl.checked;
 
-  // possibleChar.concat(getRandomLower)
-  // possibleChar.concat(getRandomUpper)
-  // possibleChar.concat(getRandomNumber)
-  // possibleChar.concat(getRandomSymbol)
+  generatePass(
+    hassymbol,
+    hasUpper,
+    hasLower,
+    hasNumber,
+    length
+    );
+});
 
-  // console.log()
-   
-// }
+//generate password function
+
+function generatePass(lower, upper, symbol, number, length) {
+  //create a string 
+  //filter out unnecessary types so it does not generate unselected values
+  //generate function for each type
+  // add final password to password variable
+  var generatedPassword = "";
+
+  const typesCount = lower + upper + symbol + number;
+  console.log("typesCount", typesCount);
+  //counts all the types that have been checked
+
+  const typesArr = [{lower}, {upper}, {symbol}, {number}].filter
+  (item => Object.values(item)[0]);
+  console.log("typesArr: ", typesArr);
+
+  //if no prompts selected
+  if(typesCount === 0) {
+    return "";
+  }
+
+  for (var i = 0; i < length; i += typesCount) {
+    typesArr.forEach(type => {
+      const functionName = Object.keys(type)[0];
+      // console.log("functionName: ", functionName);
+
+      generatedPassword += randomFunction[functionName]();
+
+    });
+  }
+
+  console.log(generatedPassword);
+}
 
 
 // Function for getting a random element from an array
@@ -221,7 +273,7 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener('click', writePassword);
+// generateBtn.addEventListener('click', writePassword);
 
 
 
