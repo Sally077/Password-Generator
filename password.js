@@ -97,14 +97,19 @@ var maxCharacterLength = 64;
 
 var len = prompt("Enter a password length between 10 and 64 : ")
 
-//ERROR Change to iteration on next line
+//ERROR cannot find a way to iterate if password does not meet length
+// tried while which I feel would suit this code best, tried do and else if and for(tried len++ but unsure where to put it)
 if (len >= minCharacterLength && len <= maxCharacterLength) { 
-  alert ("Characters meet conditions set")
-}
-else{ 
-  alert("Characters do not meet length please enter a number between 10 and 64");
+    len=alert("Characters meet condition length")
+  
+ }else{ (len <= minCharacterLength && len >= maxCharacterLength)
+  len=alert ("Characters do not meet length please enter a number between 10 and 64");
   var len = prompt("Enter a password length between 10 and 64 : ")
+
 }
+   
+  
+
 
 
 
@@ -148,3 +153,12 @@ console.log(specialArray(specialCharacters));
 console.log(numberArray(numericCharacters));
 console.log(lowerArray(lowerCasedCharacters));
 console.log(upperArray(upperCasedCharacters));
+
+
+//step 2 concatenate arrays
+
+
+const arrays = specialCharacters.concat(upperCasedCharacters, lowerCasedCharacters, numericCharacters);
+    
+
+console.log(arrays);
