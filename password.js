@@ -91,7 +91,7 @@ var upperCasedCharacters = [
   'Y',
   'Z'
 ];
-
+var len
 var minCharacterLength = 10;
 var maxCharacterLength = 64;
 
@@ -112,7 +112,7 @@ if (len >= minCharacterLength && len <= maxCharacterLength) {
 
 
 //step 3 set up if statements for confirms
-//step 4 include count to count arrays and check at least one statement is true
+
 
 var char = confirm("Would you like to include special characters : ");
 //if (char === true)
@@ -136,8 +136,12 @@ function confirmTrue() {
     arrays = lower.confirm(true) = lower.push(lower)
     arrays = upper.confirm(true) = upper.push(upper)
     arrays = number.confirm(true) = number.push(number)
- return
+    console.log(arrays);
+ return confirmTrue()
+ 
+  
 }
+//step 3b if no confirms selected alert to user
  if (char === false && lower === false && upper === false && number === false) 
   alert("Please select at least one of the following : Special Characters, numbers, uppercase or lowercase ")
 
@@ -186,4 +190,29 @@ const arrays = specialCharacters.concat(upperCasedCharacters, lowerCasedCharacte
 console.log(arrays);
 
 
+// Get references to the #generate element
+var generateBtn = document.querySelector('#generate');
 
+
+
+// Write password to the #password input
+function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector('#password');
+  
+    passwordText.value = password;
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener('click', writePassword);
+
+// step 4 include count to count arrays and check at least one statement is true ??
+//initialise password variable
+function genPass() {
+    var genpass = " " ;
+    const typesCount = char.confirm(true) + lower.confirm(true) + upper.confirm(true) + number.confirm(true);
+
+    console.log("typesCount: ", typesCount);
+
+    
+}
