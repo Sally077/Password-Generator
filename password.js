@@ -130,20 +130,41 @@ console.log(lower);
 console.log(upper);
 console.log(number);
 
-//step 3a confirm statement is true add to array
-function confirmTrue() {
-    arrays = char.confirm(true) = char.push(char)
-    arrays = lower.confirm(true) = lower.push(lower)
-    arrays = upper.confirm(true) = upper.push(upper)
-    arrays = number.confirm(true) = number.push(number)
-    console.log(arrays);
- return confirmTrue()
+//step 3a confirm statement is true add to array (not functioning)
+// function confirmTrue() {
+//     arrays = char.confirm(true) = char.push()
+//     arrays = char.confirm(false) = char.pop()
+//     arrays = lower.confirm(true) = lower.push()
+//     arrays = lower.confirm(false) = lower.pop()
+//     arrays = upper.confirm(true) = upper.push()
+//     arrays = upper.confirm(false) = upper.pop()
+//     arrays = number.confirm(true) = number.push()
+//     arrays = number.confirm(false) = number.pop()
+//     console.log(arrays);
+//  return confirmTrue()
  
-  
-}
+ 
+// }
+
 //step 3b if no confirms selected alert to user
  if (char === false && lower === false && upper === false && number === false) 
   alert("Please select at least one of the following : Special Characters, numbers, uppercase or lowercase ")
+// attempt to remove arrays if not true
+//   if (char === false)
+//   console.log(specialCharacters.length = 0);
+//   specialCharacters;
+
+//   if (lower === false)
+//   console.log(lowerCasedCharacters.length = 0);
+//   lowerCasedCharacters;
+
+//   if (upper === false)
+//   console.log(upperCasedCharacters.length = 0)
+//   upperCasedCharacters;
+
+//   if (number === false)
+//   console.log(numericCharacters.length = 0)
+//   numericCharacters;
 
 
 
@@ -208,11 +229,19 @@ generateBtn.addEventListener('click', writePassword);
 
 // step 4 include count to count arrays and check at least one statement is true ??
 //initialise password variable
-function genPass() {
-    var genpass = " " ;
-    const typesCount = char.confirm(true) + lower.confirm(true) + upper.confirm(true) + number.confirm(true);
+
+//not working correctly needs fixing
+function genPass(specialArray, lowerArray, upperArray, numberArray, length) {
+    var genpass = "" ;
+
+    //attempt to filter arrays to select only a series of values to generate password
+    const typesCount = [{specialArray} + {upperArray} + {numberArray} + {lowerArray}].filter
+    (item => Object.values(item)[1]);
 
     console.log("typesCount: ", typesCount);
 
+    console.log("typesArr: ", typesArr);
     
 }
+
+
