@@ -111,18 +111,40 @@ if (len >= minCharacterLength && len <= maxCharacterLength) {
   
 
 
-
+//step 3 set up if statements for confirms
+//step 4 include count to count arrays and check at least one statement is true
 
 var char = confirm("Would you like to include special characters : ");
+//if (char === true)
 var lower = confirm("Would you like lowercase characters : ");
+//if (lower === "true")
 var upper = confirm("Would you like uppercase characters :");
+//if (upper === "true")
 var number = confirm("Would you like numbers included in your password :");
+//if (number === "true")
+
 
 console.log(len);
 console.log(char);
 console.log(lower);
 console.log(upper);
 console.log(number);
+
+//step 3a confirm statement is true add to array
+function confirmTrue() {
+    arrays = char.confirm(true) = char.push(char)
+    arrays = lower.confirm(true) = lower.push(lower)
+    arrays = upper.confirm(true) = upper.push(upper)
+    arrays = number.confirm(true) = number.push(number)
+ return
+}
+ if (char === false && lower === false && upper === false && number === false) 
+  alert("Please select at least one of the following : Special Characters, numbers, uppercase or lowercase ")
+
+
+
+
+
 
 //step 1: generate random values from arrays(use mathfloor and math random)
 
@@ -162,3 +184,6 @@ const arrays = specialCharacters.concat(upperCasedCharacters, lowerCasedCharacte
     
 
 console.log(arrays);
+
+
+
