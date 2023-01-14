@@ -28,7 +28,7 @@ var specialCharacters = [
 
 
 // Array of numeric characters to be included in password
-// var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 // Array of lowercase characters to be included in password
  var lowerCasedCharacters = [
@@ -92,6 +92,9 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+var minCharacterLength = 10;
+var maxCharacterLength = 64;
+
 var len = prompt("Enter a password length between 10 and 64 : ")
 
 //ERROR Change to iteration on next line
@@ -115,3 +118,33 @@ console.log(char);
 console.log(lower);
 console.log(upper);
 console.log(number);
+
+//step 1: generate random values from arrays(use mathfloor and math random)
+
+function specialArray(){
+     for(i = 0; i <= length; i++)
+     return specialCharacters[Math.floor(Math.random()*specialCharacters.length)];
+
+    
+
+}
+
+function numberArray(){
+    for(i = 0; i <= length; i++)
+    return numericCharacters[Math.floor(Math.random()*numericCharacters.length)];
+}
+
+function lowerArray(){
+    for(i = 0; i <= length; i++)
+    return lowerCasedCharacters[Math.floor(Math.random()*lowerCasedCharacters.length)];
+}
+
+function upperArray(){
+    for(i = 0; i <= length; i++)
+    return upperCasedCharacters[Math.floor(Math.random()*upperCasedCharacters.length)];
+}
+
+console.log(specialArray(specialCharacters));
+console.log(numberArray(numericCharacters));
+console.log(lowerArray(lowerCasedCharacters));
+console.log(upperArray(upperCasedCharacters));
