@@ -230,18 +230,65 @@ generateBtn.addEventListener('click', writePassword);
 // step 4 include count to count arrays and check at least one statement is true ??
 //initialise password variable
 
+
+const randomfunc = {
+    lower: lowerCasedCharacters,
+    upper: upperCasedCharacters,
+    number: numericCharacters,
+    char: specialCharacters
+};
+
+
 //not working correctly needs fixing
-function genPass(specialArray, lowerArray, upperArray, numberArray, length) {
+function genPass(lower, upper, number, char, length) {
     var genpass = "" ;
 
     //attempt to filter arrays to select only a series of values to generate password
-    const typesCount = [{specialArray} + {upperArray} + {numberArray} + {lowerArray}].filter
-    (item => Object.values(item)[1]);
+    const typesCount = [{lower} + {upper} + {number} + {char}].filter
+    (item => Object.values(item)[0]);
 
     console.log("typesCount: ", typesCount);
 
     console.log("typesArr: ", typesArr);
     
 }
+
+
+
+// Test Data 
+//attempt to count arrays, filter data from len then concat arrays
+
+arr1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+arr2 = ["!", "£", "$", "%", "^", "&", "*", "(", ")"]
+
+function special() {
+    for(i = 0; i <= length; i++)
+    return arr2[Math.floor(Math.random() * arr2.length)]
+}
+
+
+
+function Num() {
+    for(i = 0; i <= length; i++)
+    return arr1[Math.floor(Math.random() * arr1.length)]
+}
+console.log(Num(arr1));
+console.log(special(arr2));
+
+var group = {
+    arr1: Num,
+    arr2: special
+};
+
+console.log(Object.keys(group)); //prints as an array but not details inside the array
+//console log to test and see if array will generate values up to the length entered in the prompt
+console.log(arr1)
+console.log(arr2)
+// test to concat arrays then alter them
+
+const catarray = arr1.concat(arr2);
+
+console.log(catarray);
+
 
 
