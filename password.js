@@ -111,17 +111,21 @@ if (len >= minCharacterLength && len <= maxCharacterLength) {
   
 
 
-//step 3 set up if statements for confirms
+//step 3 set up if statements for confirms (now displays if true)
 
 
 var char = confirm("Would you like to include special characters : ");
-//if (char === true)
+if (char === true)
+console.log(specialCharacters);
 var lower = confirm("Would you like lowercase characters : ");
-//if (lower === "true")
+if (lower === true)
+console.log(lowerCasedCharacters);
 var upper = confirm("Would you like uppercase characters :");
-//if (upper === "true")
+if (upper === true)
+console.log(upperCasedCharacters);
 var number = confirm("Would you like numbers included in your password :");
-//if (number === "true")
+if (number === true)
+console.log(numericCharacters);
 
 
 console.log(len);
@@ -132,19 +136,19 @@ console.log(number);
 
 //step 3a confirm statement is true add to array (not functioning)
 // function confirmTrue() {
-//     arrays = char.confirm(true) = char.push()
-//     arrays = char.confirm(false) = char.pop()
-//     arrays = lower.confirm(true) = lower.push()
-//     arrays = lower.confirm(false) = lower.pop()
-//     arrays = upper.confirm(true) = upper.push()
-//     arrays = upper.confirm(false) = upper.pop()
-//     arrays = number.confirm(true) = number.push()
-//     arrays = number.confirm(false) = number.pop()
-//     console.log(arrays);
+    // specialCharacters = char.confirm(true).push(specialCharacters)
+    // arrays = char.confirm(false) = char.pop()
+    // arrays = lower.confirm(true) = lower.push()
+    // arrays = lower.confirm(false) = lower.pop()
+    // arrays = upper.confirm(true) = upper.push()
+    // arrays = upper.confirm(false) = upper.pop()
+    // arrays = number.confirm(true) = number.push()
+    // arrays = number.confirm(false) = number.pop()
+    // console.log(specialCharacters);
 //  return confirmTrue()
  
  
-// }
+//  }
 
 //step 3b if no confirms selected alert to user
  if (char === false && lower === false && upper === false && number === false) 
@@ -280,7 +284,7 @@ var group = {
     arr2: special
 };
 
-console.log(Object.keys(group)); //prints as an array but not details inside the array
+console.log(Object.entries(group)); //prints as an array but not details inside the array (perhaps try adding arrays inside?)
 //console log to test and see if array will generate values up to the length entered in the prompt
 console.log(arr1)
 console.log(arr2)
