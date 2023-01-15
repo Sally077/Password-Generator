@@ -1,4 +1,5 @@
 // Array of special characters to be included in password
+
 var specialCharacters = [
   '@',
   '%',
@@ -91,9 +92,11 @@ var upperCasedCharacters = [
   'Y',
   'Z'
 ];
-var len
+
+var len;
 var minCharacterLength = 10;
 var maxCharacterLength = 64;
+var pass = "";
 
 var len = prompt("Enter a password length between 10 and 64 : ")
 
@@ -116,16 +119,24 @@ if (len >= minCharacterLength && len <= maxCharacterLength) {
 
 var char = confirm("Would you like to include special characters : ");
 if (char === true)
+pass += specialCharacters;
 console.log(specialCharacters);
 var lower = confirm("Would you like lowercase characters : ");
 if (lower === true)
+pass += lowerCasedCharacters;
 console.log(lowerCasedCharacters);
 var upper = confirm("Would you like uppercase characters :");
 if (upper === true)
+pass += upperCasedCharacters;
 console.log(upperCasedCharacters);
 var number = confirm("Would you like numbers included in your password :");
 if (number === true)
+pass += numericCharacters;
 console.log(numericCharacters);
+
+
+
+// console.log("Count Number of arrays if true",arrayCount.length);
 
 
 console.log(len);
@@ -134,44 +145,10 @@ console.log(lower);
 console.log(upper);
 console.log(number);
 
-//step 3a confirm statement is true add to array (not functioning)
-// function confirmTrue() {
-    // specialCharacters = char.confirm(true).push(specialCharacters)
-    // arrays = char.confirm(false) = char.pop()
-    // arrays = lower.confirm(true) = lower.push()
-    // arrays = lower.confirm(false) = lower.pop()
-    // arrays = upper.confirm(true) = upper.push()
-    // arrays = upper.confirm(false) = upper.pop()
-    // arrays = number.confirm(true) = number.push()
-    // arrays = number.confirm(false) = number.pop()
-    // console.log(specialCharacters);
-//  return confirmTrue()
- 
- 
-//  }
 
 //step 3b if no confirms selected alert to user
  if (char === false && lower === false && upper === false && number === false) 
   alert("Please select at least one of the following : Special Characters, numbers, uppercase or lowercase ")
-// attempt to remove arrays if not true
-//   if (char === false)
-//   console.log(specialCharacters.length = 0);
-//   specialCharacters;
-
-//   if (lower === false)
-//   console.log(lowerCasedCharacters.length = 0);
-//   lowerCasedCharacters;
-
-//   if (upper === false)
-//   console.log(upperCasedCharacters.length = 0)
-//   upperCasedCharacters;
-
-//   if (number === false)
-//   console.log(numericCharacters.length = 0)
-//   numericCharacters;
-
-
-
 
 
 
@@ -199,6 +176,8 @@ function upperArray(){
     for(i = 0; i <= length; i++)
     return upperCasedCharacters[Math.floor(Math.random()*upperCasedCharacters.length)];
 }
+
+
 
 console.log(specialArray(specialCharacters));
 console.log(numberArray(numericCharacters));
@@ -256,6 +235,19 @@ function genPass(lower, upper, number, char, length) {
     console.log("typesArr: ", typesArr);
     
 }
+// attempt to generate password
+function applypassword() {
+    var password = "";
+
+    for (var i = 0; i <= length; i++){
+    
+        password += pass[Math.floor(Math.random() * pass.length)]
+    }
+
+    console.log("The password is : ",password);
+
+}
+
 
 
 
@@ -293,6 +285,22 @@ console.log(arr2)
 const catarray = arr1.concat(arr2);
 
 console.log(catarray);
+
+
+
+
+//types count attempt
+
+array1 = arr1
+array2 = arr2
+
+typesCount = [array1] + [array2];
+
+    console.log("typesCount: ", typesCount.length);
+    //counts all the items inside the array but not the whole object
+
+    // console.log("typesArr: ", typesArr);
+    
 
 
 
