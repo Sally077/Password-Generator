@@ -109,16 +109,43 @@ N/A
 I have created a series of tests as I went along and took screenshots of some of the tests I tried when I ran my code.
 
 Test 1 add console log to check button is connected 
+<img src="/images/Test_1.png">     
+  
+  
+  
 
 Test 2 checking that function generate password adds text
+  
+  <img src="/images/Test_2.png">  
+  
 
 Test 3 Checking Prompts work
+  
+  <img src="/images/Test_3.png">  
+  
+  
+  Test 4 Checking of random char, case and numeric values to console
+  
+   <img src="/images/Test_4.png">  
+  
+  
 
 Test 5 checking that string.charcode will select random uppercase and random lowercase values
+  
+<img src="/images/Test_5.png">  
+  
+  
+  
 
 Test 6 log to check user needs returns customised length of password and Boolean values if special characters, numbers, lower and uppercase are needed.
+  
+  <img src="/images/Test_6.png">  
 
 Test 7 Code now displays arrays if confirm is true on lines 119 - 128
+  
+  <img src="/images/Test_7.png">  
 
 Test 8 Test to see if it displays on array when only special characters are selected ( now only displays array on line 119 all false values not console logged
+  
+  <img src="/images/Test_8.png">  
 
