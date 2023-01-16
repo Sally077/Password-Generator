@@ -57,6 +57,9 @@ My code does not currently need an install and can be viewed directly through th
 Provide instructions and examples for use. Include screenshots as needed.
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+                                                                           
+This is what the main screen looked like 
+<img src="images/05-javascript-challenge-demo.png">
 
 
 
